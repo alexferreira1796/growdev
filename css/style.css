@@ -179,6 +179,11 @@ a {
     margin: 0;
   }
 }
+@media screen and (max-width: 400px) {
+  .contact p {
+    font-size: 13px;
+  }
+}
 footer {
   text-align: center;
   background-color: var(--colorPrimary);

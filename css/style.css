@@ -67,6 +67,12 @@ a {
 .profile img {
   width: 130px;
 }
+.contact {
+  margin-bottom: 10px;
+}
+.contact p {
+  margin-bottom: 0;
+}
 .border {
   width: 50px;
   height: 1px;
@@ -159,7 +165,7 @@ a {
     top: 25px;
   }
   .content {
-    top: 0;
+    top: 20px;
     padding: 50px 0;
     height: 100%;
   }

@@ -1,0 +1,186 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: "Bree Serif", "Arial", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+:root {
+  --colorPrimary: #393c54;
+  --colorSecondary: rgba(242, 188, 15, 1);
+  --white: #fff;
+}
+#main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.bg {
+  background-color: var(--colorPrimary);
+  width: 100%;
+  height: 100vh;
+  transform: translate3d(-200px, 0, 0);
+}
+.content {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 999;
+  top: 50px;
+  padding: 0 50px 0 0;
+}
+#description p {
+  line-height: 30px;
+  text-align: justify;
+}
+.content h1,
+.content h2 {
+  margin-bottom: 20px;
+}
+.content div:first-child {
+  margin-top: 30px;
+}
+.js .content {
+  display: none;
+}
+.profile {
+  position: absolute;
+  z-index: 99;
+  top: 50px;
+  background-color: var(--white);
+  transform: translate3d(-200px, 0px, 0px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  height: 80vh;
+  padding: 20px;
+  box-shadow: -10px 8px 6px 0px var(--colorSecondary);
+  -webkit-box-shadow: -10px 8px 6px 0px var(--colorSecondary);
+  -moz-box-shadow: -10px 8px 6px 0px var(--colorSecondary);
+}
+.profile img {
+  width: 130px;
+}
+.border {
+  width: 50px;
+  height: 1px;
+  background-color: var(--colorPrimary);
+  border: none !important;
+  margin: 20px 0;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+.btn {
+  border: 1px solid var(--colorPrimary);
+  border-radius: 10px;
+  width: 120px;
+  margin: 0 5px;
+}
+.btn-projects {
+  color: var(--white);
+  background-color: var(--colorPrimary);
+}
+.btn-projects:hover {
+  color: var(--colorPrimary);
+  background-color: var(--white);
+}
+.btn-on:hover {
+  color: var(--white);
+  background-color: var(--colorPrimary);
+}
+.sociais {
+  margin: 20px 0;
+}
+.sociais a {
+  margin: 0 10px;
+}
+.sociais a > i {
+  color: var(--colorPrimary);
+  font-size: 25px;
+}
+.jobs {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  padding-top: 20px;
+}
+.jobs a {
+  margin-bottom: 10px;
+  color: var(--colorPrimary);
+  font-weight: bold;
+}
+.jobs a > i {
+  transform: translate3d(-10px, 0, 0);
+}
+.js .anima {
+  animation: animalink 1s forwards;
+}
+@keyframes animalink {
+  from {
+    transform: translate3d(-10px, 0, 0);
+  }
+  to {
+    transform: translate3d(0px, 0, 0);
+  }
+}
+.js .active {
+  display: block !important;
+  animation: animaSection 0.5s forwards;
+}
+@keyframes animaSection {
+  from {
+    transform: translate3d(100px, 0, 0);
+  }
+  to {
+    transform: translate3d(0px, 0, 0);
+  }
+}
+@media screen and (max-width: 768px) {
+  #main {
+    flex-direction: column;
+  }
+  .bg {
+    transform: translate3d(0px, 0, 0);
+  }
+  .profile {
+    width: 80%;
+    height: auto;
+    transform: translate3d(0px, 0, 0);
+    top: 25px;
+  }
+  .content {
+    top: 0;
+    padding: 50px 0;
+    height: 100%;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+  .buttons a {
+    margin: 10px 0;
+  }
+  .content div:first-child {
+    margin: 0;
+  }
+}
+footer {
+  text-align: center;
+  background-color: var(--colorPrimary);
+  width: 100%;
+  color: var(--white);
+  height: 100%;
+  padding: 10px;
+}
+footer p {
+  margin: 0;
+}
